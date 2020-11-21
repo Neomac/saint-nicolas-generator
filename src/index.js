@@ -4,10 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+export class People {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+function createPeople(name) {
+  let people = new People(name);
+  return people;
+}
+
+
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <h1>{createPeople("Antoine").name}</h1>,
   document.getElementById('root')
 );
 
